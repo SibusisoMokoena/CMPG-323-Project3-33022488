@@ -2,9 +2,9 @@
 
 namespace TelemetryPortal_MVC.Repository
 {
-    public interface IClientsRepository
+    public interface IClientsRepository 
     {
-        Task<Client> GetClientByIdAsync(int clientId);
+    Task<Client> GetClientByIdAsync(Guid clientId);
         Task<IEnumerable<Client>> GetAllClientsAsync();
         Task AddClientAsync(Client client);
         Task UpdateClientAsync(Client client);
