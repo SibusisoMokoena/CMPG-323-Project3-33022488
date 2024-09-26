@@ -7,7 +7,16 @@ namespace TelemetryPortal_MVC.Repository
 {
     public interface IGenericRepository<T> where T : class
     {
-      async Task<T> GetByIdAsync(int id);
+        Task<IEnumerable<T>> GetAllAsync();
+        Task<bool> ExistsAsync(int id)
+        Task<T> GetByIdAsync(int id);
+        Task AddAsync(T entity);
+        void Update(T entity);
+        void Remove(T entity);
+
+        // custome code that were not provided:
+
         
+
     }
 }
