@@ -7,6 +7,6 @@ namespace TelemetryPortal_MVC.Repository
 {
     public interface IGenericRepository
     {
-
+        project GetProjectByIdAsync();
     }
 }
