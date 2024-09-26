@@ -24,7 +24,7 @@ namespace TelemetryPortal_MVC.Repository
             return await _dbSet.ToListAsync();
         }
 
-        public async Task<T> GetByIdAsync(int id)
+        public async Task<T> GetByIdAsync(Guid? id)
         {
             return await _dbSet.FindAsync(id);
         }
@@ -52,7 +52,7 @@ namespace TelemetryPortal_MVC.Repository
             _context.SaveChanges();
         }
 
-        public async Task<bool> ExistsAsync(int id)
+        public async Task<bool> ExistsAsync(Guid? id)
         {
             var entity = await _dbSet.FindAsync(id);
             return entity != null;
